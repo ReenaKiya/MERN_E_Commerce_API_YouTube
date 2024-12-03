@@ -40,9 +40,13 @@ app.use('/api/payment', paymentRouter)
 
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/MERN_E_Commerce",
+mongoose.connect("mongodb://0.0.0.0:27017/MERN_E_Commerce",
 ).then(() => console.log("MongoDB Connected successfully..."))
   .catch((err) => console.log(err))
+
+// mongoose.connect("mongodb://127.0.0.1:27017/MERN_E_Commerce",
+// ).then(() => console.log("MongoDB Connected successfully..."))
+//   .catch((err) => console.log(err))
 
 
 
