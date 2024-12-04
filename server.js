@@ -6,7 +6,9 @@ import cartRouter from './Routes/cart.js'
 import bodyParser from 'express'
 import addressRouter from './Routes/address.js'
 import paymentRouter from './Routes/payment.js'
-import cors from "cors"
+import cors from "cors";
+import dotenv from 'dotenv';
+dotenv.config()
 
 const app = express();
 
@@ -39,14 +41,14 @@ app.use('/api/address', addressRouter)
 app.use('/api/payment', paymentRouter)
 
 
-mongoose.connect("mongodb://localhost:27017/MERN_E_Commerce",
-).then(() => console.log("MongoDB Connected successfully..."))
-  .catch((err) => console.log(err))
-
-
-// mongoose.connect("mongodb://0.0.0.0:27017/MERN_E_Commerce",
+// mongoose.connect("mongodb://localhost:27017/MERN_E_Commerce",
 // ).then(() => console.log("MongoDB Connected successfully..."))
 //   .catch((err) => console.log(err))
+
+
+mongoose.connect("mongodb://0.0.0.0:27017/MERN_E_Commerce",
+).then(() => console.log("MongoDB Connected successfully..."))
+  .catch((err) => console.log(err))
 
 
 // mongoose.connect("mongodb://127.0.0.1:27017/MERN_E_Commerce",
@@ -55,7 +57,7 @@ mongoose.connect("mongodb://localhost:27017/MERN_E_Commerce",
 
 
 
-const port = 1000;
-app.listen(port, () => console.log(`Server is running on port ${port}`))
+// const port = 1000;
+app.listen(process.env.PORT, () => console.log(`Server is running on port ${process.env.PORT}`))
 
 
