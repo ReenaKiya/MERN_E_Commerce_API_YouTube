@@ -40,7 +40,8 @@ app.use('/api/address', addressRouter)
 // payment Router
 app.use('/api/payment', paymentRouter)
 
-
+//  MONGOURI='mongodb://0.0.0.0:27017/MERN_E_Commerce'
+//  MONGOURI='mongodb://127.0.0.1:27017/MERN_E_Commerce'
 // mongoose.connect("mongodb://localhost:27017/MERN_E_Commerce",
 // ).then(() => console.log("MongoDB Connected successfully..."))
 //   .catch((err) => console.log(err))
