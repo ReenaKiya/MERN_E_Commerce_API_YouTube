@@ -45,7 +45,7 @@ app.use('/api/payment', paymentRouter)
 // ).then(() => console.log("MongoDB Connected successfully..."))
 //   .catch((err) => console.log(err))
 
-const mongoURI = process.env.MONGOURI || 'mongodb://0.0.0.0:27017/MERN_E_Commerce'
+const mongoURI = process.env.MONGOURI || 'mongodb://localhost:27017/MERN_E_Commerce'
 mongoose.connect(mongoURI,
 ).then(() => console.log("MongoDB Connected successfully..."))
   .catch((err) => console.log(err))
