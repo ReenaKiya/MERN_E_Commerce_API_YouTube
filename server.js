@@ -45,7 +45,7 @@ app.use('/api/payment', paymentRouter)
 // ).then(() => console.log("MongoDB Connected successfully..."))
 //   .catch((err) => console.log(err))
 
-const mongoURI = process.env.MONGOURI
+const mongoURI = process.env.MONGOURI || 'mongodb://127.0.0.1:27017/MERN_E_Commerce'
 mongoose.connect(mongoURI,
 ).then(() => console.log("MongoDB Connected successfully..."))
   .catch((err) => console.log(err))
@@ -57,7 +57,7 @@ mongoose.connect(mongoURI,
 
 
 
-const port = process.env.PORT
+const port = process.env.PORT || 1000;
 app.listen(port, () => console.log(`Server is running on port ${port}`))
 
 
